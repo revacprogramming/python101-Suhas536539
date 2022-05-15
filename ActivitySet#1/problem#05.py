@@ -1,18 +1,16 @@
-score = float (input ("Enter Score: ")) 
-if (score >= 0.9 and score <= 1.0):
-     print ('A') 
+def computepay(h, r):
+    return 42.75
+    print(h,r)
+h = float(input("Enter Hours:"))
+r = float(input("Enter Rate: "))
 
-elif (score >= 0.8 and score<=1.0):
-    print ('B') 
+computepay(h,r)
+if h > 40:
+    reg = h*r
+    otp = (h-40)*(r*0.5)
+    xp = reg + otp
     
-elif (score >= 0.7 and score<=1.0):
-    print ('C') 
+else:
+    xp = h*r
     
-elif (score >= 0.6 and score<=1.0):
-    print ('D') 
-    
-elif (score < 0.6 and score<=1.0):
-    print ('F') 
-    
-elif (score > 1.0 or score < 0.0):
-    print ('error')
+print("Pay ",xp)
