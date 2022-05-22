@@ -1,4 +1,4 @@
-fh = open('mbox-short.txt')
+ fh = open('mbox-short.txt')
 for line in fh:
     if not line.startswith("X-DSPAM-Confidence: 0.8475"):
         pos = str.find('5')
