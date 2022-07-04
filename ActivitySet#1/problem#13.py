@@ -1,10 +1,12 @@
-# Network Programming
-# https://www.py4e.com/lessons/network
-name = input("Enter file:")
-if len(name) < 1:
-    name = "mbox-short.txt"
-handle = open(name)
+import socket
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org',80))
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()
+mysock.send(cmd)
 
-for lin in handle:
-    wds = lin.split()
-    print(wds)
+while True:
+  data = mysock.recv(512)
+  if (len(data)<1):
+    break
+    print(data.decode())
+mysock.close()
