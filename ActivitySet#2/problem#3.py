@@ -1,30 +1,22 @@
 def get_cs():
-   #"""get string input"""
-   phrase = str(input("enter a string"))
-   return phrase
+
+    #"""get string input"""
+    s=input("Enter a string: ")
+    return s
+
+
 
 def cs_to_lot(cs):
-   # """convert connected string to list of strings"""
-   
-   cs_to_lot = list(cs)
-   cs_to_lot = cs.split("=")
-   cs_to_lot = cs.s("=")
-   cs_to_lot = list(cs)
-   cs_to_lot = cs.split("=")
-   cs_to_lot = cs.s("=")
-
-  #done
-  #done
-  #done
-   
-   
-   
-   print(cs_to_lot) 
+    #""" convert  connected  string  to  list  of  strings """
+    l=[]
+    cs=cs.split(";")
+    for i in cs:
+        i=tuple(i.split("="))
+        l.append(i)
+    return l
 
 def main():
-   cs = get_cs()
-   lot = cs_to_lot(cs)
-   print(lot)
+    cs = get_cs()
 
-if __name__ == '__main__':
-    main()
+    lot = cs_to_lot(cs)
+    print(lot)
