@@ -1,8 +1,3 @@
-from re import I
-
-
-global I
-
 def get_cs():
     """get string input"""
     s = ("Input a string")
@@ -13,15 +8,15 @@ def cs_to_lot(cs):
     """convert connected string to list of strings"""
     l=[]
     cs=cs.split(";")
-    for I in cs:
-        I=tuple(I.split("="))
+    for i in cs:
+        i=tuple(i.split("="))
     return l
 
 
 def lot_to_cs(lot):
     """convert list of strings to connected string"""
-    l=list()
-    l.append(I)
+    a=[]
+    a.append(cs_to_lot)
     return lot    
 
 def main():
